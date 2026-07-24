@@ -1,34 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Social links profile</title>
+  <link rel="icon" type="image/png" href="./assets/images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <title>Avishkar | Social Links Profile</title>
+
   <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @font-face {
+      font-family: Inter;
+      src: url("./assets/fonts/static/Inter-Regular.ttf");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: Inter;
+      src: url("./assets/fonts/static/Inter-SemiBold.ttf");
+      font-weight: 600;
+    }
+
+    @font-face {
+      font-family: Inter;
+      src: url("./assets/fonts/static/Inter-Bold.ttf");
+      font-weight: 700;
+    }
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    body {
+
+      min-height: 100vh;
+
+      background: hsl(0, 0%, 8%);
+
+      color: hsl(0, 0%, 100%);
+
+      font-family: Inter, sans-serif;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 20px;
+
+    }
+
+
+    .container {
+
+      width: 100%;
+
+      max-width: 384px;
+
+      background: hsl(0, 0%, 12%);
+
+      padding: clamp(24px, 5vw, 40px);
+
+      border-radius: 12px;
+
+      text-align: center;
+
+    }
+
+
+    img {
+
+      width: 88px;
+      height: 88px;
+
+      border-radius: 50%;
+
+      margin-bottom: 24px;
+
+    }
+
+
+    h2 {
+
+      font-size: clamp(20px, 5vw, 24px);
+
+      font-weight: 700;
+
+      margin-bottom: 8px;
+
+    }
+
+
+    h3 {
+
+      color: hsl(75, 94%, 57%);
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      margin-bottom: 24px;
+
+    }
+
+
+    p {
+
+      color: hsl(0, 0%, 80%);
+
+      font-size: 14px;
+
+      line-height: 1.5;
+
+      margin-bottom: 24px;
+
+    }
+
+
+    .project-container {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 16px;
+
+    }
+
+
+    .project-container a {
+
+      display: block;
+
+      width: 100%;
+
+      background: hsl(0, 0%, 20%);
+
+      color: white;
+
+      text-decoration: none;
+
+      padding: 14px;
+
+      border-radius: 8px;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      transition: 
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease;
+
+    }
+
+
+    .project-container a:hover {
+
+      background: hsl(75, 94%, 57%);
+
+      color: black;
+
+    }
+
+
+    .project-container a:focus-visible {
+
+      outline: 2px solid hsl(75, 94%, 57%);
+
+      outline-offset: 3px;
+
+    }
+
+
+    .project-container a:active {
+
+      transform: scale(0.97);
+
+    }
+
+
+    footer {
+
+      position: fixed;
+
+      bottom: 15px;
+
+      font-size: 12px;
+
+      text-align: center;
+
+    }
+
+
+    footer a {
+
+      color: hsl(75, 94%, 57%);
+
+    }
+
+
+    @media (max-width: 375px) {
+
+      body {
+
+        padding: 16px;
+
+      }
+
+
+      .container {
+
+        padding: 24px;
+
+      }
+
+
+      img {
+
+        width: 80px;
+
+        height: 80px;
+
+      }
+
+    }
+
+
+    @media (max-width: 320px) {
+
+      .container {
+
+        padding: 20px;
+
+      }
+
+
+      h2 {
+
+        font-size: 20px;
+
+      }
+
+
+      .project-container a {
+
+        padding: 12px;
+
+      }
+
+    }
+
+
   </style>
+
 </head>
+
+
 <body>
 
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
 
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
+  <main class="container">
+
+
+    <img 
+      src="./assets/images/avatar-jessica.jpeg" 
+      alt="Avishkar Mandlik profile picture"
+    >
+
+
+    <h2>
+      Avishkar Mandlik
+    </h2>
+
+
+    <h3>
+      Mumbai, India
+    </h3>
+
+
+    <p>
+      "Front-end developer and avid reader."
+    </p>
+
+
+    <div class="project-container">
+
+
+      <a href="https://dentwise-jade.vercel.app/" target="_blank">
+        Dentwise
+      </a>
+
+
+      <a href="https://code-click-five.vercel.app/" target="_blank">
+        Code Click
+      </a>
+
+
+      <a href="https://netflix-clone-g09r.onrender.com/" target="_blank">
+        Netflix Clone
+      </a>
+
+
+      <a href="https://odin-blog-api-liart.vercel.app/" target="_blank">
+        Blog API
+      </a>
+
+
+      <a href="https://github.com/Avishkar1234" target="_blank">
+        GitHub
+      </a>
+
+
+    </div>
+
+
+  </main>
+
+
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+
+    Challenge by 
+    <a href="https://www.frontendmentor.io" target="_blank">
+      Frontend Mentor
+    </a>
+
   </footer>
+
+
 </body>
+
 </html>
